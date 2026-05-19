@@ -1,0 +1,39 @@
+.section-title {
+  margin-bottom: 60px;
+}
+
+.section-title.center {
+  text-align: center;
+}
+
+.section-title span {
+  color: #0057ff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 12px;
+  font-family: "Urbanist", sans-serif;
+}
+
+.section-title h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-family: "Urbanist", sans-serif;
+}
+
+.section-title p {
+  max-width: 650px;
+  color: #666;
+  line-height: 1.8;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title.center p {
+  margin: auto;
+}
