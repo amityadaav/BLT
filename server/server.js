@@ -159,7 +159,7 @@ app.use(cors(corsOptions));
 /* ─────────────────────────────────────────────
    HANDLE PREFLIGHT REQUESTS
 ───────────────────────────────────────────── */
-app.options("*", cors(corsOptions));
+app.options(/(.*)/, cors(corsOptions));
 
 /* ─────────────────────────────────────────────
    BODY PARSER
