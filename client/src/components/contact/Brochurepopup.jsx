@@ -303,7 +303,7 @@
 
 
 import React, { useState, useEffect } from "react";
-import "./BrochurePopup.css";
+import "./Brochurepopup.css";
 import logo from "../../assets/images/BLT.webp";
 
 import {
