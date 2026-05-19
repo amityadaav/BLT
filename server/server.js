@@ -123,60 +123,43 @@ const app = express();
 connectDB();
 
 /* ─────────────────────────────────────────────
+   TRUST PROXY
+───────────────────────────────────────────── */
+app.set("trust proxy", 1);
+
+/* ─────────────────────────────────────────────
    SECURITY
 ───────────────────────────────────────────── */
 app.use(helmet());
 
 /* ─────────────────────────────────────────────
-   TRUST PROXY (Render/Vercel Important)
-───────────────────────────────────────────── */
-app.set("trust proxy", 1);
-
-/* ─────────────────────────────────────────────
    CORS CONFIG
 ───────────────────────────────────────────── */
-const allowedOrigins = (
-  process.env.ALLOWED_ORIGINS ||
-  "http://localhost:5173,https://bluelith.vercel.app"
-)
-  .split(",")
-  .map((origin) => origin.trim());
+const corsOptions = {
+  origin: [
+    "http://localhost:5173",
+    "https://bluelith.vercel.app",
+  ],
 
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      /* Allow requests with no origin
-         (mobile apps, Postman, curl, etc.) */
-      if (!origin) {
-        return callback(null, true);
-      }
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
+  allowedHeaders: [
+    "Content-Type",
+    "Authorization",
+  ],
 
-      console.log("Blocked by CORS:", origin);
-
-      return callback(
-        new Error(`CORS blocked for origin: ${origin}`)
-      );
-    },
-
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-    ],
-
-    credentials: true,
-  })
-);
+  credentials: true,
+};
 
 /* ─────────────────────────────────────────────
-   HANDLE PREFLIGHT
+   ENABLE CORS
 ───────────────────────────────────────────── */
-app.options("*", cors());
+app.use(cors(corsOptions));
+
+/* ─────────────────────────────────────────────
+   HANDLE PREFLIGHT REQUESTS
+───────────────────────────────────────────── */
+app.options("*", cors(corsOptions));
 
 /* ─────────────────────────────────────────────
    BODY PARSER
@@ -226,6 +209,16 @@ app.use(
 );
 
 /* ─────────────────────────────────────────────
+   ROOT ROUTE
+───────────────────────────────────────────── */
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "BlueLith API Running ",
+  });
+});
+
+/* ─────────────────────────────────────────────
    HEALTH CHECK
 ───────────────────────────────────────────── */
 app.get("/api/health", (req, res) => {
@@ -247,16 +240,6 @@ app.use("/api/contact", contactRoutes);
 app.use("/api/project", projectRoutes);
 
 app.use("/api/career", careerRoutes);
-
-/* ─────────────────────────────────────────────
-   ROOT ROUTE
-───────────────────────────────────────────── */
-app.get("/", (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: "BlueLith API Running 🚀",
-  });
-});
 
 /* ─────────────────────────────────────────────
    404 HANDLER
