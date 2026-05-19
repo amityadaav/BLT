@@ -2,9 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import "./StartProjectPopup.css";
 import logo from "../../assets/images/BLT.webp";
 
-const API_URL = import.meta.env.VITE_API_URL
-  ? `${import.meta.env.VITE_API_URL}/api/project`
-  : "http://localhost:5000/api/project";
+const BASE_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000";
+
+const API_URL = `${BASE_URL}/api/project`;
 
 /**
  * START PROJECT POPUP

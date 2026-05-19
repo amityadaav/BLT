@@ -17,9 +17,10 @@ import {
   FiMoreHorizontal,  // ← replaces FiSparkles
 } from "react-icons/fi";
 
-const API_URL = import.meta.env.VITE_API_URL
-  ? `${import.meta.env.VITE_API_URL}/api/contact`
-  : "http://localhost:5000/api/contact";
+const BASE_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000";
+
+const API_URL = `${BASE_URL}/api/contact`;
 
 const ConversationPopup = ({
   isOpen,

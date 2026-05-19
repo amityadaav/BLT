@@ -43,7 +43,7 @@ const CareerPage = () => {
   return (
     <>
       <Navbar />
-      <main id="careerpage" aria-label="Careers at SkyLith Technology">
+      <main id="careerpage" aria-label="Careers at BlueLih Technology">
         <Career />
       </main>
       <Footer />

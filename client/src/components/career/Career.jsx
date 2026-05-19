@@ -10,9 +10,10 @@ import {
   Award, Zap, AlertCircle, Loader2,
 } from "lucide-react";
 
-const API_URL = import.meta.env.VITE_API_URL
-  ? `${import.meta.env.VITE_API_URL}/api/career`
-  : "http://localhost:5000/api/career";
+const BASE_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000";
+
+const API_URL = `${BASE_URL}/api/career`;
 
 const DEPT_ICONS = {
   Engineering: Code2,
