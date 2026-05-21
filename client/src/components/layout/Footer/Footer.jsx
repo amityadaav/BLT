@@ -671,14 +671,6 @@ const Footer = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <a
-                    href="tel:+919905906689"
-                    className="footer__contact-link"
-                    itemProp="telephone"
-                    aria-label="Call Bluelith Technology"
-                  >
-                    +91 91350-79644
-                  </a>
                 </li>
 
                 <li className="footer__contact-item">
