@@ -677,7 +677,7 @@ const Footer = () => {
                     itemProp="telephone"
                     aria-label="Call Bluelith Technology"
                   >
-                    +91 99059 06689
+                    +91 91350-79644
                   </a>
                 </li>
 
