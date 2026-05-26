@@ -4,7 +4,7 @@ import { blogData } from "../data/blogData";
 import "./BlogPage.css";
 import Navbar from "../components/layout/Navbar/Navbar";
 import Footer from "../components/layout/Footer/Footer";
-
+import { Helmet } from 'react-helmet-async'
 /* ─── Icons ────────────────────────────────────────────── */
 const ArrowLeft = () => (
   <svg viewBox="0 0 16 16" fill="none" width="14" height="14" aria-hidden="true">
@@ -263,6 +263,22 @@ const BlogPage = () => {
 
   return (
     <div className="bp-root">
+      <Helmet>
+  <title>Blog | Software &amp; AI Insights | Bluelith Technology Bengaluru</title>
+  <meta name="description" content="Read the Bluelith Technology blog for expert insights on software development, AI, mobile apps, UI/UX design, and tech for startups and enterprises in India and beyond." />
+  <meta name="keywords" content="software development blog India, AI technology blog Bengaluru, startup tech insights India, web development tips Bangalore, IT company blog India, Bluelith Technology blog" />
+  <link rel="canonical" href="https://www.bluelith.in/blog" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bluelith.in/blog" />
+  <meta property="og:title" content="Blog | Software &amp; AI Insights | Bluelith Technology Bengaluru" />
+  <meta property="og:description" content="Expert insights on software development, AI, mobile apps, and product engineering from Bluelith Technology's team in Bengaluru." />
+  <meta property="og:image" content="https://www.bluelith.in/og-blog.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bluelith Technology Blog | Software &amp; AI Insights" />
+  <meta name="twitter:description" content="Expert insights on AI, software development, mobile apps and product engineering from Bluelith Technology, Bengaluru." />
+  <meta name="twitter:image" content="https://www.bluelith.in/og-blog.jpg" />
+</Helmet>
+
       <Navbar />
       {selectedBlog
         ? <BlogPost blog={selectedBlog} setSelectedBlog={setSelectedBlog} />

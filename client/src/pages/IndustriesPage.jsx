@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import "./IndustriesPage.css";
+import { Helmet } from 'react-helmet-async'
 
 /* ── Popups ── */
 import ConsultationPopup  from "../components/contact/Consultationpopup";
@@ -287,6 +288,23 @@ const IndustriesPage = () => {
   /* ── Render ── */
   return (
     <>
+    <Helmet>
+  <title>Industries We Serve | Software &amp; IT Company Bengaluru | Bluelith Technology</title>
+  <meta name="description" content="Bluelith Technology builds software solutions for fintech, healthtech, edtech, e-commerce, logistics, and more. Serving startups and enterprises across industries in India and worldwide." />
+  <meta name="keywords" content="software company for fintech India, healthtech software Bengaluru, edtech app development India, e-commerce software Bangalore, logistics software company India, industry software solutions Bengaluru" />
+  <link rel="canonical" href="https://www.bluelith.in/industries" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bluelith.in/industries" />
+  <meta property="og:title" content="Industries We Serve | Bluelith Technology Bengaluru" />
+  <meta property="og:description" content="Custom software solutions for fintech, healthtech, edtech, e-commerce, and more. Bluelith Technology — Bengaluru's industry-focused software company." />
+  <meta property="og:image" content="https://www.bluelith.in/og-industries.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Industries We Serve | Bluelith Technology" />
+  <meta name="twitter:description" content="Software for fintech, healthtech, edtech, e-commerce and more. Bluelith Technology, Bengaluru." />
+  <meta name="twitter:image" content="https://www.bluelith.in/og-industries.jpg" />
+</Helmet>
+ 
+
     <Navbar />
     <div
       className={`ip ${inView ? "ip--visible" : ""}`}

@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Helmet } from 'react-helmet-async'
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./ProjectDetails.css";
@@ -279,6 +280,22 @@ export default function ProjectPage() {
 
   return (
     <>
+    <Helmet>
+  <title>Our Projects &amp; Portfolio | Software Company Bengaluru | Bluelith Technology</title>
+  <meta name="description" content="Explore Bluelith Technology's portfolio of AI, web, and mobile app projects built for startups and enterprises. See how we've helped clients across India and worldwide." />
+  <meta name="keywords" content="software portfolio Bengaluru, IT company projects India, web app portfolio Bangalore, AI projects India, mobile app portfolio Bengaluru, Bluelith Technology work" />
+  <link rel="canonical" href="https://www.bluelith.in/projects" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bluelith.in/projects" />
+  <meta property="og:title" content="Our Projects &amp; Portfolio | Bluelith Technology Bengaluru" />
+  <meta property="og:description" content="AI, web, and mobile app projects built by Bluelith Technology for startups and enterprises across India and worldwide." />
+  <meta property="og:image" content="https://www.bluelith.in/og-projects.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio | Bluelith Technology | Software Company Bengaluru" />
+  <meta name="twitter:description" content="See what we've built — AI, web, and mobile projects from Bluelith Technology, Bengaluru's trusted software partner." />
+  <meta name="twitter:image" content="https://www.bluelith.in/og-projects.jpg" />
+</Helmet>
+
       <Navbar />
 
       <div className="project-page">

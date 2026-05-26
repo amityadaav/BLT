@@ -1,12 +1,21 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/layout/Navbar/Navbar";
-
+    import { Helmet } from 'react-helmet-async'
 const NotFound = () => {
   const navigate = useNavigate();
 
   return (
     <>
+ 
+<Helmet>
+  <title>Page Not Found | Bluelith Technology</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Go back to Bluelith Technology's homepage to explore our software and IT services in Bengaluru." />
+  {/* Tell Google NOT to index 404 pages */}
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://www.bluelith.in/404" />
+</Helmet>
+
       <Navbar />
       <div
         style={{

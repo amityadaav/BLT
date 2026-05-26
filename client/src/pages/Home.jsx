@@ -1,29 +1,4 @@
-// import Navbar from "../components/layout/Navbar/Navbar";
-// import Footer from "../components/layout/Footer/Footer";
-
-// import Hero from "../components/home/Hero/Hero";
-// import About from "../components/home/About/About";
-// import Services from "../components/home/Services/Services";
-// import WhyChoose from "../components/home/WhyChoose/WhyChooseUs";
-
-// function Home() {
-//   return (
-//     <>
-//       <Navbar />
-
-//       <Hero />
-//       <About />
-//       <WhyChoose />
-//       <Services />
-
-
-//       <Footer />
-//     </>
-//   );
-// }
-
-// export default Home;
-
+import { Helmet } from 'react-helmet-async'
 import React from "react";
 import Navbar from "../components/layout/Navbar/Navbar";
 import Footer from "../components/layout/Footer/Footer";
@@ -42,6 +17,40 @@ import Industries from "../components/home/Solution/Industries";
 const Home = () => {
   return (
     <>
+      {/* ── SEO Meta Tags ── */}
+      <Helmet>
+        <title>Bluelith Technology | Software &amp; IT Company in Bengaluru | AI Solutions</title>
+        <meta
+          name="description"
+          content="Bluelith Technology is a top-rated software and IT company in Bengaluru. We build AI-powered web apps, mobile apps &amp; digital products for startups and enterprises. Free consultation available."
+        />
+        <meta
+          name="keywords"
+          content="software company Bengaluru, IT company Bangalore, AI software development India, web app development Bengaluru, custom software development India, mobile app development Bangalore, UI UX design agency India, product engineering company Bengaluru, SaaS development India, digital transformation Bangalore, best IT company Bengaluru"
+        />
+        <link rel="canonical" href="https://www.bluelith.in/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.bluelith.in/" />
+        <meta property="og:title" content="Bluelith Technology | Software &amp; IT Company in Bengaluru | AI Solutions" />
+        <meta
+          property="og:description"
+          content="Strategy. Design. Engineering. Delivered. Top-rated software &amp; IT company in Bengaluru building AI-powered web apps, mobile apps &amp; digital products worldwide."
+        />
+        <meta property="og:image" content="https://www.bluelith.in/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:site_name" content="Bluelith Technology" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@bluelith" />
+        <meta name="twitter:title" content="Bluelith Technology | Software &amp; IT Company in Bengaluru" />
+        <meta
+          name="twitter:description"
+          content="AI-powered web apps, mobile apps &amp; digital products for startups and enterprises. Top software &amp; IT company in Bengaluru."
+        />
+        <meta name="twitter:image" content="https://www.bluelith.in/og-image.jpg" />
+      </Helmet>
+
       {/* ── Fixed top navbar ── */}
       <Navbar />
 
@@ -55,8 +64,7 @@ const Home = () => {
         <About />
       </section>
 
-      {/* ── Industries / Solutions ──
-          Replace <PlaceholderSection> with your real Industries component */}
+      {/* ── Industries / Solutions ── */}
       <section id="industries" aria-label="Our Solutions">
         <Industries />
       </section>
@@ -72,7 +80,7 @@ const Home = () => {
       </section>
 
       {/* ── Blog / Insights ── */}
-      <section id="blogs" aria-label="Insights & Blog">
+      <section id="blogs" aria-label="Insights &amp; Blog">
         <Blog />
       </section>
 
