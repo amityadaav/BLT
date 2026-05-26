@@ -1,43 +1,9 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://bluelith.in/</loc>
-  </url>
-
-  <url>
-    <loc>https://bluelith.in/industries/finance</loc>
-  </url>
-
-  <url>
-    <loc>https://bluelith.in/services</loc>
-  </url>
-
-  <url>
-    <loc>https://bluelith.in/blog</loc>
-  </url>
-
-  <url>
-    <loc>https://bluelith.in/careers</loc>
-  </url>
-
-  <url>
-    <loc>https://bluelith.in/contact</loc>
-  </url>
-
-</urlset> -->
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://bluelith.in/</loc>
     <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://bluelith.in/industries/finance</loc>
-    <priority>0.8</priority>
   </url>
 
   <url>
