@@ -427,7 +427,7 @@ const SERVICE_LINKS = [
 
 const SOCIAL_LINKS = [
   {
-    href: "https://instagram.com/bluelith",
+    href: "https://www.instagram.com/blu.elith/",
     label: "Bluelith Technology on Instagram",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -438,16 +438,16 @@ const SOCIAL_LINKS = [
     ),
   },
   {
-    href: "https://twitter.com/bluelith",
-    label: "Bluelith Technology on Twitter",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M23.954 4.569c-.885.39-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.949.555-2.005.959-3.127 1.184-.897-.959-2.178-1.559-3.594-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.708.87 3.216 2.188 4.099-.807-.026-1.566-.248-2.228-.616v.062c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.317 0-.626-.03-.927-.086.627 1.956 2.444 3.379 4.6 3.419-1.68 1.318-3.809 2.105-6.102 2.105-.396 0-.787-.023-1.175-.067C2.179 20.29 4.768 21 7.548 21c9.057 0 14-7.496 14-13.986 0-.21-.005-.423-.015-.633A9.936 9.936 0 0024 4.59z" />
-      </svg>
-    ),
+href: "https://www.facebook.com/profile.php?id=61589838615330",
+label: "Bluelith Technology on Facebook",
+icon: (
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M22 12a10 10 0 10-11.563 9.875v-6.987H7.898V12h2.539V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.888h-2.33v6.987A10 10 0 0022 12z" />
+  </svg>
+),
   },
   {
-    href: "https://linkedin.com/company/bluelith",
+    href: "https://www.linkedin.com/in/bluelith-technology-9550733b4/",
     label: "Bluelith Technology on LinkedIn",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
